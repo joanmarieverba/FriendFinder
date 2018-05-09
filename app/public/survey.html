@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Reservation Page</title>
+    <title>Survey Questions</title>
 
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -13,64 +12,182 @@
 
 </head>
 
+<style>
+
+.list-style {
+    width: 10%
+}
+
+.space {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+</style>
+
 <body>
 
     <div class="container">
 
-        <div class="jumbotron">
-            <h1 class="text-center">
-                <span class="fa fa-fire"></span> Hot Restaurant</h1>
-            <hr>
-            <h2 class="text-center">Make your reservation</h2>
-            <br>
-
-            <div class="text-center">
-                <a href="/tables">
-                    <button class="btn btn-lg btn-primary">
-                        <span class="fa fa-list-alt"></span> View Tables</button>
-                </a>
-                <a href="/">
-                    <button class="btn btn-lg btn-default">
-                        <span class="fa fa-home"></span>
-                    </button>
-                </a>
-            </div>
+        <div class="page-header">
+            <h1>Survey Questions</h1>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
 
-                <!-- Reservation Page -->
+                <!-- Survey Form -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Table Reservation</h4>
+                        <h4 class="panel-title">About You</h4>
                     </div>
                     <div class="panel-body">
 
                         <form role="form">
 
                             <div class="form-group">
-                                <label for="reserve-name">Name</label>
-                                <input type="text" class="form-control" id="reserve-name">
+                                <label for="reserve-name">Name (Required)</label>
+                                <input type="text" class="form-control" id="name">
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-phone">Phone Number</label>
-                                <input type="text" class="form-control" id="reserve-phone">
+                                <label for="reserve-phone">Link to Photo Image (Required)</label>
+                                <input type="text" class="form-control" id="photo">
                             </div>
 
+                            <h4>Question 1</h4>
+                            <h5>I prefer indoor to outdoor activities.</h5>
                             <div class="form-group">
-                                <label for="reserve-email">Email</label>
-                                <input type="text" class="form-control" id="reserve-email">
+                                <select class="list-style" id="q1">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
                             </div>
 
+                            <h4>Question 2</h4>
+                            <h5>I'd rather read a book than take a walk.</h5>
                             <div class="form-group">
-                                <label for="reserve-unique-id">Unique ID</label>
-                                <input type="text" class="form-control" id="reserve-unique-id">
+                                <select class="list-style" id="q2">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
-                        </form>
+                            <h4>Question 3</h4>
+                            <h5>I am generally an easygoing person.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q3">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 4</h4>
+                            <h5>I live in the moment instead of worrying about the future.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q4">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 5</h4>
+                            <h5>I keep up with current events.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q5">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+
+                            <h4>Question 6</h4>
+                            <h5>I prefer to do activities with one friend instead of with a large group.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q6">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 7</h4>
+                            <h5>I enjoy learning new things.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q7">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 8</h4>
+                            <h5>I consider myself a helpful person.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q8">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 9</h4>
+                            <h5>I find things to do with my time and am seldom bored.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q9">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 10</h4>
+                            <h5>I keep up with the latest movies and television shows.</h5>
+                            <div class="form-group">
+                                <select class="list-style" id="q10">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+
+
 
                     </div>
                 </div>
@@ -78,69 +195,80 @@
             </div>
         </div>
 
+        <div class="row space">
+            <form>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+        </div>
 
-        <footer class="footer">
-            <div class="container">
-                <p>
-                    <a href="/api/friends">API Friends List</a> |
-                    <a href="https://github.com/joanmarieverba/friendfinder">GitHub Repo</a>
-                </p>
-            </div>
-        </footer>
+        <div class="row space">
+            <p>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/joanmarieverba/friendfinder">GitHub Repo</a>
+            </p>
+        </div>
 
     </div>
-
+    <!-- jQuery JS -->
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
 </body>
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!-- HANDLE DATA IS SENT -->
 <script type="text/javascript">
 
     // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+    // When the user hits submit, jQuery grabs all of the fields then sends a post request to our api
 
     $(".submit").on("click", function (event) {
         event.preventDefault();
 
-        // Here we grab the form elements
-        var newReservation = {
-            customerName: $("#reserve-name").val().trim(),
-            phoneNumber: $("#reserve-phone").val().trim(),
-            customerEmail: $("#reserve-email").val().trim(),
-            customerID: $("#reserve-unique-id").val().trim()
+        // Retrive the input
+        let friendData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
         };
 
-        console.log(newReservation);
+        console.log(friendData);
 
-        // This line is the magic. It"s very similar to the standard ajax function we used.
-        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-        // depending on if a tables is available or not.
+        // Clear the form 
+            $("#name").val("");
+            $("#photo").val("");
+            $("#q1").val("");
+            $("#q2").val("");
+            $("#q3").val("");
+            $("#q4").val("");
+            $("#q5").val("");
+            $("#q6").val("");
+            $("#q7").val("");
+            $("#q8").val("");
+            $("#q9").val("");
+            $("#q10").val("");
+                        
 
-        $.post("/api/tables", newReservation,
-            function (data) {
+        // post the data to the friends API.
+        $.post("/api/friends", friendData, function (data) {
 
-                // If a table is available... tell user they are booked.
-                if (data) {
-                    alert("Yay! You are officially booked!");
-                }
 
-                // If a table is available... tell user they on the waiting list.
-                else {
-                    alert("Sorry you are on the wait list");
-                }
 
-                // Clear the form when submitting
-                $("#reserve-name").val("");
-                $("#reserve-phone").val("");
-                $("#reserve-email").val("");
-                $("#reserve-unique-id").val("");
+        });
 
-            });
+
 
     });
 
 </script>
+
