@@ -1,4 +1,3 @@
-
 // LOAD DATA
 
 let friendsData = require("../data/friends");
@@ -7,7 +6,6 @@ let friendsData = require("../data/friends");
 // ROUTING
 
 module.exports = function (app) {
-    // API GET Requests
 
     app.get("/api/friends", function (req, result) {
         result.json(friendsData);
