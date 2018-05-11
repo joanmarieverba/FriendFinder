@@ -7,15 +7,17 @@ let friendsData = require("../data/friends");
 
 module.exports = function (app) {
 
-    app.get("/api/friends", function (req, result) {
-        result.json(friendsData);
-        console.log("friendsData ", result.json(friendsData));
+    //sends the contents of friendsData
+    app.get("/api/friends", function (req, res) {
+        res.json(friendsData);
     });
 
-
-    app.post("/api/friends", function (req, result) {
-        console.log("result ", result.req.body);
-
+    //adds the input data to friendsData
+    app.post("/api/friends", function (req, res) {
+        console.log("result ", req.body);
+        friendsData.push(req.body);
+        console.log("newfriendsData ", friendsData);
+        
     });
 
 
