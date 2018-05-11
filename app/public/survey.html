@@ -23,6 +23,11 @@
     margin-bottom: 20px;
 }
 
+img {
+    height: 75px;
+    width: 75px;
+}
+
 </style>
 
 <body>
@@ -148,7 +153,7 @@
                             </div>
 
                             <h4>Question 8</h4>
-                            <h5>I consider myself a helpful person.</h5>
+                            <h5>I love to cook.</h5>
                             <div class="form-group">
                                 <select class="list-style" id="q8">
                                     <option value=""></option>
@@ -220,8 +225,8 @@
                 </div>
                 <div class="modal-body">
                     <p><h4 class="modal-title">Best Match</h4></p>
-                    <p id="nameOfMatch"></p>
-                    <p id="photoOfMatch"></p>
+                    <h5 id="nameOfMatch"></h5>
+                    <img id="photoOfMatch" alt="photo">
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
@@ -280,9 +285,14 @@
             $("#q10").val("");
                         
 
-        // post the data to the friends API.
+        // retrieve the best match data from the friends API.
         $.post("/api/friends", friendData, function (data) {
-            console.log("data ", data);
+       
+            let nameMatch = data[0];
+            let photoMatch = data[1];
+            //place data in the modal
+            $("#nameOfMatch").text(nameMatch);
+            $("#photoOfMatch").attr("src", photoMatch);
         });
 
 
@@ -292,9 +302,3 @@
 
 </script>
 
-
-
-<!-- Trigger the modal with a button -->
-<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
-
-<!-- Modal -->
