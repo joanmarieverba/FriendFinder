@@ -220,7 +220,8 @@
                 </div>
                 <div class="modal-body">
                     <p><h4 class="modal-title">Best Match</h4></p>
-                    <p>Insert name and photo here</p>
+                    <p id="nameOfMatch"></p>
+                    <p id="photoOfMatch"></p>
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
@@ -281,11 +282,13 @@
 
         // post the data to the friends API.
         $.post("/api/friends", friendData, function (data) {
-
+            console.log("data ", data);
         });
 
 
     });
+
+
 
 </script>
 
