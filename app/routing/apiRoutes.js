@@ -7,7 +7,7 @@ let friendsData = require("../data/friends");
 
 module.exports = function (app) {
 
-    //sends the contents of friendsData
+    //sends the contents of friendsData to the server
     app.get("/api/friends", function (req, res) {
         res.json(friendsData);
     });
@@ -44,7 +44,7 @@ module.exports = function (app) {
         let bestMatchUrl = friendsData[bestMatchIndex].photo;
         bestMatch.push(bestMatchName);
         bestMatch.push(bestMatchUrl);
-        console.log(bestMatch);
+        //send results to server for retrieval
         res.json(bestMatch);
     });
 
