@@ -2,8 +2,8 @@
 
 let friendArray = [
     {
-        name: "Jupiter",
-        photo: "http://jmvtestsite.com/wp-content/uploads/2016/06/jupiter.jpg",
+        name: "B. A. Friend",
+        photo: "http://jmvtestsite.com/wp-content/uploads/2018/05/person.png",
         scores: [
                 "1",
                 "1",
@@ -18,8 +18,8 @@ let friendArray = [
          ]
     },
     {
-        name: "Neptune",
-        photo: "http://jmvtestsite.com/wp-content/uploads/2016/06/neptune.jpg",
+        name: "I. M. Friend",
+        photo: "http://jmvtestsite.com/wp-content/uploads/2018/05/ios7-contact-outline.png",
         scores: [
             "1",
             "2",
