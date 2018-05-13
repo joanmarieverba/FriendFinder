@@ -220,16 +220,12 @@ img {
 
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">Close: &times;</button>
-                    
+                    <button type="button" class="close" data-dismiss="modal">Close: &times;</button>       
                 </div>
                 <div class="modal-body">
                     <p><h4 class="modal-title">Best Match</h4></p>
                     <h5 id="nameOfMatch"></h5>
                     <img id="photoOfMatch" alt="photo">
-                </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                 </div>
             </div>
 
@@ -244,8 +240,7 @@ img {
 <!-- HANDLE DATA -->
 <script type="text/javascript">
 
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // When the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // When the user hits submit, jQuery grabs all of the fields then sends a post request 
 
     $(".submit").on("click", function (event) {
         event.preventDefault();
@@ -285,7 +280,7 @@ img {
             $("#q10").val("");
                         
 
-        // retrieve the best match data from the friends API.
+        // retrieve the best match data from apiRoutes.js
         $.post("/api/friends", friendData, function (data) {
        
             let nameMatch = data[0];

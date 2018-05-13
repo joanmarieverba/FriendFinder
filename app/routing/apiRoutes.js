@@ -2,7 +2,6 @@
 
 let friendsData = require("../data/friends");
 
-
 // ROUTING
 
 module.exports = function (app) {
@@ -11,7 +10,6 @@ module.exports = function (app) {
     app.get("/api/friends", function (req, res) {
         res.json(friendsData);
     });
-
 
     app.post("/api/friends", function (req, res) {
         //adds the input data to friendsData
@@ -47,7 +45,6 @@ module.exports = function (app) {
         //send results to server for retrieval
         res.json(bestMatch);
     });
-
 
 };
 
